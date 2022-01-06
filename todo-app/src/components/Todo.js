@@ -48,7 +48,7 @@ class Todo extends React.Component {
         <input
           type='text'
           value={this.state.inputValue}
-          onChange={this.inputHandler}
+          onChange={this.inputHandler.bind(this)}
         />
         <button onClick={this.addItem.bind(this)}>Add to list</button>
         {elements}
