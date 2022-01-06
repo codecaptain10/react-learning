@@ -4,9 +4,9 @@ import TodoItem from "./TodoItem";
 class Todo extends React.Component {
   state = {
     elements: [
-      { id: "345678", title: "Work out", isCompleted: true },
-      { id: "123458", title: "Sleeping", isCompleted: false },
-      { id: "111832", title: "Coding", isCompleted: true },
+      { id: "345678", title: "Work out", isCompleted: false },
+      { id: "123458", title: "Sleeping", isCompleted: true },
+      { id: "111832", title: "Coding", isCompleted: false },
     ],
   };
 

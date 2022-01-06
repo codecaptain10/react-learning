@@ -14,3 +14,11 @@ code {
     border: 1px solid #cdcdcd;
     margin: 10px;
 }
+
+.card.completed {
+    opacity: 0.5;
+}
+
+.card.completed {
+    text-decoration: line-through;
+}
