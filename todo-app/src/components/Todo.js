@@ -10,9 +10,22 @@ class Todo extends React.Component {
     ],
   };
 
+  markCompleted(id) {
+    const index = this.state.elements.findIndex(x => x.id == id);
+    const newElements = this.state.elements;
+    newElements[index].isCompleted = true;
+
+    this.setState({ elements: newElements });
+  }
+
   render() {
     const elements = this.state.elements.map(element => {
-      return <TodoItem element={element} />;
+      return (
+        <TodoItem
+          element={element}
+          markClicked={this.markCompleted.bind(this)}
+        />
+      );
     });
     return <div> Hello To Do App {elements}</div>;
   }
