@@ -8,14 +8,29 @@ class Todo extends React.Component {
       { id: "123458", title: "Sleeping", isCompleted: true },
       { id: "111832", title: "Coding", isCompleted: false },
     ],
+    inputValue: "",
   };
 
   markCompleted(id) {
-    const index = this.state.elements.findIndex(x => x.id == id);
+    const index = this.state.elements.findIndex(x => x.id === id);
     const newElements = this.state.elements;
     newElements[index].isCompleted = true;
 
     this.setState({ elements: newElements });
+  }
+
+  addItem() {
+    const item = {
+      id: Math.random(),
+      title: this.state.inputValue,
+    };
+    const newElements = [item, ...this.state.elements];
+    this.setState({ elements: newElements });
+  }
+
+  inputHandler(event) {
+    const newValue = event.target.value;
+    this.setState({ inputValue: newValue });
   }
 
   render() {
@@ -27,7 +42,18 @@ class Todo extends React.Component {
         />
       );
     });
-    return <div> Hello To Do App {elements}</div>;
+    return (
+      <div>
+        Hello To Do App
+        <input
+          type='text'
+          value={this.state.inputValue}
+          onChange={this.inputHandler}
+        />
+        <button onClick={this.addItem.bind(this)}>Add to list</button>
+        {elements}
+      </div>
+    );
   }
 }
 
