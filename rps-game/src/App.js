@@ -2,10 +2,18 @@ import { useState } from "react";
 
 const App = () => {
   const [userChoice, setUserChoice] = useState(null);
+  const [computerChoice, setComputerChoice] = useState(null);
   const choices = ["rock", "paper", "scissors"];
 
   const handleClick = value => {
     setUserChoice(value);
+    generateComputerChoice();
+  };
+
+  const generateComputerChoice = () => {
+    const randomNumber = Math.random() * choices.length;
+    const randomChoice = choices[randomNumber];
+    setComputerChoice(randomChoice);
   };
 
   return (
