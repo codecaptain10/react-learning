@@ -12,8 +12,9 @@ const App = () => {
     <div>
       <h1>User choice is: {userChoice}</h1>
       <h1>Computer choice is: </h1>
-      {choices.map(choice => (
+      {choices.map((choice, index) => (
         <button
+          key={index}
           onClick={() => {
             handleClick(choice);
           }}>
