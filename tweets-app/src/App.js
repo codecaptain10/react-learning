@@ -8,26 +8,10 @@ function App() {
         <h1>Hello React Tweets App!</h1>
       </div>
       <div className='app'>
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
+        <Tweet name='Tony Stark' />
+        <Tweet name='Steve Rogers' />
+        <Tweet name='Scott Lang' />
+        <Tweet name='Stephen Strange' />
       </div>
     </div>
   );
