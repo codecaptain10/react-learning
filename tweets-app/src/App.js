@@ -3,9 +3,32 @@ import Tweet from "./components/Tweet";
 
 function App() {
   return (
-    <div className='app'>
-      <h1>Hello React Tweets App!</h1>
-      <Tweet />
+    <div className='container'>
+      <div className='baner'>
+        <h1>Hello React Tweets App!</h1>
+      </div>
+      <div className='app'>
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+      </div>
     </div>
   );
 }
