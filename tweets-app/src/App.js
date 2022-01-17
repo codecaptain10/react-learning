@@ -41,7 +41,7 @@ function App() {
         <Tweet name='Hulk' message='Smaaaash!!!' likes={4243 + " likes"} />
         <Tweet
           name='Thanos'
-          message='Perfect with balanc...this is how everything always have to should be.'
+          message='Perfect with balance...this is how everything always have to should be.'
           likes={112 + " likes"}
         />
       </div>
