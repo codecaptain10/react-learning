@@ -44,6 +44,27 @@ function App() {
           message='Perfect with balance...this is how everything always have to should be.'
           likes={112 + " likes"}
         />
+
+        <Tweet
+          name='Loki'
+          message='Glorious purpose.'
+          likes={5231 + " likes"}
+        />
+        <Tweet
+          name='Nick Fury'
+          message='We need heroes.'
+          likes={231 + " likes"}
+        />
+        <Tweet
+          name='Peter Parker'
+          message='Hi ... it is you friendly spidey.'
+          likes={2314 + " likes"}
+        />
+        <Tweet
+          name='Kang'
+          message='I am Kang, The Conquer.'
+          likes={1331 + " likes"}
+        />
       </div>
     </div>
   );
