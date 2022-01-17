@@ -45,3 +45,7 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.tweet p {
+  width: 250px;
+}

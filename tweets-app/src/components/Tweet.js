@@ -5,8 +5,8 @@ function Tweet(props) {
   return (
     <div className='tweet'>
       <h3>{props.name}</h3>
-      <p>Random tweet message</p>
-      <h3>Number of likes</h3>
+      <p>{props.message}</p>
+      <h3>{props.likes}</h3>
     </div>
   );
 }
