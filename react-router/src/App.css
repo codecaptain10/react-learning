@@ -18,3 +18,27 @@ nav {
   align-items: center;
   list-style: none;
 }
+
+.icons {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: yellowgreen;
+  border-radius: 10%;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+.icon img {
+  height: 100px;
+  width: 100px;
+}
