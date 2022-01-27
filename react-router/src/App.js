@@ -6,12 +6,7 @@ import About from "./pages/About";
 import Shop from "./pages/Shop";
 import Nav from "./pages/Nav";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
