@@ -20,9 +20,11 @@ function Shop() {
   return (
     <div className='icons'>
       {items.map(item => (
-        <div key={item.id} className='icon'>
-          <img src={item.images.icon}></img>
-        </div>
+        <Link to={`/shop/${item.id}`}>
+          <div key={item.id} className='icon'>
+            <img src={item.images.icon}></img>
+          </div>
+        </Link>
       ))}
     </div>
   );
