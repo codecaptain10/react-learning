@@ -14,7 +14,7 @@ function Shop() {
     const data = await fetch("https://fortnite-api.com/v2/cosmetics/br/new");
 
     const dataItems = await data.json();
-    console.log(dataItems.data.items);
+    //console.log(dataItems.data.items);
     setItems(dataItems.data.items);
   };
   return (

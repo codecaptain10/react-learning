@@ -2,18 +2,30 @@ import React from "react";
 import "../App.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-function ItemDetail() {
+function ItemDetail({ match }) {
   const [item, setItem] = useState([]);
+  const params = useParams();
 
   useEffect(() => {
-    fetchItemm();
+    fetchItem();
+    //console.log(params);
   }, []);
 
-  const fetchItemm = async () => {};
+  const fetchItem = async () => {
+    const COSMETIC_ID = "BID_940_PrimalFalcon_CV6IJ";
+    const fetchItem = await fetch(
+      `https://fortnite-api.com/v2/cosmetics/br/${params.id}`
+    );
+    const items = await fetchItem.json();
+    await setItem(items);
+    //console.log(items);
+    console.log(item.data.name);
+  };
   return (
-    <div className='icons'>
-      <h1>Item</h1>
+    <div>
+      <h1>Item: {item.data.name}</h1>
     </div>
   );
 }
