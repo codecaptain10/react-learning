@@ -22,3 +22,9 @@
   background-color: rgb(197, 212, 212);
   margin-top: 15vh;
 }
+
+form {
+  position: absolute;
+  margin-top: 80px;
+  left: 30%;
+}
