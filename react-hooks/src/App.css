@@ -64,6 +64,7 @@ body {
   background-color: rgb(39, 63, 131);
   border: 2px solid white;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .content {
@@ -90,4 +91,15 @@ body {
   height: 100%;
   justify-content: center;
   text-align: center;
+}
+
+/*useState*/
+.example-app button {
+  width: 70px;
+  height: 30px;
+  margin: 2px;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 20px;
+  cursor: pointer;
 }
