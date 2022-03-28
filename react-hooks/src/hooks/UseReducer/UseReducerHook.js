@@ -2,7 +2,7 @@ import React, { useReducer, useState } from "react";
 
 function UseReducerHook() {
   //useState - you need two states and change these in two steps
-
+  /*
   const [count, setCount] = useState(0);
   const [showText, setShowText] = useState(true);
 
@@ -10,8 +10,22 @@ function UseReducerHook() {
     setCount(count + 1);
     setShowText(!showText);
   };
+  */
 
   //useReducer - you can change more arguments by one step
+  //Function reducer show what should be change in state by each type of action
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "INCREMENT":
+        return { count: state.count + 1, showText: state.showText };
+      case "toggleShowText":
+        return { count: state.count, showText: !state.showText };
+      default:
+        return state;
+    }
+  };
+  //useReducer(reducer function, object with initial states of properties )
+  const [state, dispatch] = useReducer(reducer, { count: 0, showText: "" });
 
   return (
     <div className='content'>
@@ -33,13 +47,22 @@ function UseReducerHook() {
           depends on the previous one. useReducer also lets you optimize
           performance for components that trigger deep updates because you can
           pass dispatch down instead of callbacks.
+          <br />
+          <br />
+          Example: Mini-app with show text by click
         </p>
       </div>
 
       <div className='example-app'>
-        <h3>Counter:{count}</h3>
-        <button onClick={onClick}>Click here!</button>
-        {showText && <p>Text!</p>}
+        <h3>Counter:{state.count}</h3>
+        <button
+          onClick={() => {
+            dispatch({ type: "INCREMENT" });
+            dispatch({ type: "toggleShowText" });
+          }}>
+          Click here!
+        </button>
+        {state.showText && <p>Text!</p>}
       </div>
     </div>
   );
