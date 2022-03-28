@@ -18,6 +18,8 @@ function UseStateHook() {
       <div className='description'>
         <h1>useState Hook</h1>
         <p>
+          <h4>const [state, setState] = useState(initialState);</h4>
+          <br />
           Returns a stateful value, and a function to update it.
           <br />
           <br />
