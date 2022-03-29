@@ -118,3 +118,30 @@ body {
   margin-top: 10px;
   font-size: 20px;
 }
+
+/*useEffect*/
+.app-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 30%;
+  margin-left: 40%;
+}
+
+.app-content button {
+  width: 100%;
+}
+
+.counters {
+  display: flex;
+  flex-direction: column;
+}
+
+.counters div {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
