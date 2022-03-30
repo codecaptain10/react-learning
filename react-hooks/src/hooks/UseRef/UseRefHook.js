@@ -34,7 +34,7 @@ function UseRefHook() {
           instance fields in classes.
           <br />
           <br />
-          Example:
+          Example: Change name by button
         </p>
       </div>
 
