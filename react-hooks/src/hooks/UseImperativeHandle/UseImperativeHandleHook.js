@@ -5,7 +5,15 @@ function UseImperativeHandleHook() {
     <div className='content'>
       <div className='description'>
         <h1>useImperativeHandle Hook</h1>
-        <p></p>
+        <p>
+          <h4>useImperativeHandle(ref, createHandle, [deps])</h4>
+          <br />
+          useImperativeHandle customizes the instance value that is exposed to
+          parent components when using ref.
+          <br />
+          <br />
+          As always, imperative code using refs should be avoided in most cases.
+        </p>
       </div>
 
       <div className='example-app'></div>
