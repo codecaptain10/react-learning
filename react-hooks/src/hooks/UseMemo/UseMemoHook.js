@@ -7,11 +7,9 @@ function UseMemoHook() {
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/comments")
-      .then(response => {
-        setData(response.data);
-      });
+    axios.get("").then(response => {
+      setData(response.data);
+    });
   }, []);
 
   const findLongestName = comments => {
