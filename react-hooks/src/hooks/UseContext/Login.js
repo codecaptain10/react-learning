@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "./UseContextHook";
 
-function Login({ setUserName }) {
+function Login() {
+  const { setUserName } = useContext(AppContext);
+
   return (
     <div>
       <input

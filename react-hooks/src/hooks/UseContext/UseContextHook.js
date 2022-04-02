@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import Login from "./Login";
 import User from "./User";
+
+export const AppContext = createContext(null);
 
 function UseContextHook() {
   const [userName, setUserName] = useState("");
@@ -30,15 +32,15 @@ function UseContextHook() {
           optimize it by using memoization.
           <br />
           <br />
-          Example:
+          Example: Context from two other components
         </p>
       </div>
 
       <div className='example-app'>
-        <div>
-          <Login setUserName={setUserName} />
-          <User userName={userName} />
-        </div>
+        <AppContext.Provider value={{ userName, setUserName }}>
+          <Login />
+          <User />
+        </AppContext.Provider>
       </div>
     </div>
   );
