@@ -63,7 +63,7 @@ body {
   color: azure;
   background-color: rgb(39, 63, 131);
   border: 2px solid white;
-  transition: 0.3s;
+  transition: 0.2s;
   cursor: pointer;
 }
 

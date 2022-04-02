@@ -13,6 +13,9 @@ function UseImperativeHandleHook() {
           <br />
           <br />
           As always, imperative code using refs should be avoided in most cases.
+          <br />
+          <br />
+          Example:
         </p>
       </div>
 

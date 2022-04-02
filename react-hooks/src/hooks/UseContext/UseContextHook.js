@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import Login from "./Login";
+import User from "./User";
 
 function UseContextHook() {
+  const [userName, setUserName] = useState("");
+
   return (
     <div className='content'>
       <div className='description'>
@@ -8,7 +12,12 @@ function UseContextHook() {
         <p></p>
       </div>
 
-      <div className='example-app'></div>
+      <div className='example-app'>
+        <div>
+          <Login setUserName={setUserName} />
+          <User userName={userName} />
+        </div>
+      </div>
     </div>
   );
 }
