@@ -1,6 +1,6 @@
 import React from "react";
 
-function Login() {
+function Login({ setUserName }) {
   return (
     <div>
       <input
